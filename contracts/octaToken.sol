@@ -29,7 +29,7 @@ contract OctaToken is ERC721 {
         _;
     }
 
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
+    constructor() ERC721("OCTA Token", "OT") {
         owner = payable(msg.sender);  
     }
     
