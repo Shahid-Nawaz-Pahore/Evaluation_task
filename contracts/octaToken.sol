@@ -20,12 +20,15 @@ contract OctaToken is ERC721 {
     uint256 public totalMinted;
     mapping(address => uint256) public userMints; 
     mapping(address => uint256[]) private _userMintedIds;  
-
-
+    modifier onlyAdmin() {
+        require(msg.sender == owner, "Sorry! you are not admin"); 
+        _;
+    }
 
     constructor(string memory name, string memory symbol) ERC721(name, symbol) {
         owner = payable(msg.sender);  
     }
+    
+
 
 }
-
