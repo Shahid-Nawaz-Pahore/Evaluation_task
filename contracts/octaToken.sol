@@ -57,7 +57,7 @@ contract OctaToken is ERC721 {
         emit Minted(msg.sender, _quantity);  
     }
 
-        function checkLevelStatus() internal {
+    function checkLevelStatus() internal {
         if (!level1Open && totalMinted >= 600) {
             level1Open = true;
             emit LevelChanged("Level 1 opened");
@@ -99,7 +99,11 @@ contract OctaToken is ERC721 {
     }
 
 
+    function viewMintedIds() external view returns (uint256[] memory ids) {
+        return _userMintedIds[msg.sender];  
+    }
 
-
-
+    function viewUserTotalMints() external view returns (uint256) {
+        return userMints[msg.sender];  
+    }
 }
