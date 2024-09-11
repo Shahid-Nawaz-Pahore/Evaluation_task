@@ -5,6 +5,10 @@
     "hardhat": "^2.22.10"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.0.2"
+    "@openzeppelin/contracts": "^4.0.2",
+    "dotenv": "^16.4.5",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ethers": "^5.0.0",
+    "web3modal": "^1.9.12"
   }
 }
