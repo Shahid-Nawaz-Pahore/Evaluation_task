@@ -14,7 +14,7 @@ contract OctaToken is ERC721 {
     uint256 public constant MAX_SUPPLY = 12000;  
     uint256 public constant MINT_LIMIT_PER_TRANSACTION = 3;  
     uint256 public constant MAX_MINTS_PER_USER = 5;  
-    uint256 public constant TRANSFER_FEE = 100 * 1e16;  
+    uint256 public constant TRANSFER_FEE = 100 wei;  
     address payable public owner; 
     bool public level1Open;  
     bool public level2Open;
